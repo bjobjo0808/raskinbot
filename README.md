@@ -1,118 +1,117 @@
 # raskinbot    
 
-タスク - 案件毎に作成  
-ログ - 勤怠データ
+task - 案件毎に作成  
+log - 勤怠データ
 
-## 勤怠追加
+## Command
 
-### 送信
+### add log
+
+#### `command` 
 
 ```
-send [対象日(yyyymmdd)] [タスク番号] [時間]
+send [target date(yyyymmdd)] [task id] [time]
 ```
 
-### レスポンス
+#### `response` 
 
 ```
 勤怠を追加しました。  
-ログID:[ログID]
-タスク名:[タスク名]
-対象日:[対象日(yyyy-mm-dd)]
-時間:[時間]h
+ログID:[log id]
+タスク名:[task name]
+対象日:[target date(yyyy-mm-dd)]
+時間:[time]h
 ```
 
-### 備考
+### edit log
 
-## 勤怠編集
-
-### 送信
+#### `command` 
 
 ```
-edit [ログID] [対象日(yyyymmdd)] [タスク番号] [時間]
+edit [log id] [target date(yyyymmdd)] [task id] [time]
 ```
 
-### レスポンス
+#### `response`
 
 ```
 勤怠を編集しました。
-ログID:[ログID]
-タスク名:[タスク名]
-対象日:[対象日(yyyy-mm-dd)]
-時間:[時間]h
+ログID:[log id]
+タスク名:[task name]
+対象日:[target date(yyyy-mm-dd)]
+時間:[time]h
 ```
 
-### 備考
+#### `etc`
+time=0でデータ削除
 
-時間=0でデータ削除
+## add task
 
-## タスク追加
-
-### 送信
+#### `command` 
 
 ```
-send-task [タスク名]
+send-task [task name]
 ```
 
-### レスポンス
+#### `response`
 
 ```
 タスクを追加しました。
-タスクID:[タスクID]
-タスク名:[タスク名]
-時間:[時間]
+タスクID:[task id]
+タスク名:[task name]
+時間:[time]
 ```
 
-### 備考
+#### `etc`
 
-## タスク編集
+## edit task
 
-### 送信
+#### `command` 
 
 ```
-edit-task [タスクID] [タスク名]
+edit-task [task id] [task name]
 ```
 
-### レスポンス
+#### `response`
 
 ```
 タスクを編集しました。
-タスクID:[タスクID]
-タスク名:[タスク名]
-時間:[時間]
+タスクID:[task id]
+タスク名:[task name]
+時間:[time]
 ```
 
-### 備考
+#### `etc`
 
 タスクは削除できない。
 
-## CSV出力
+## csv export
 
-### 送信
+#### `command` 
 
 ```
-export [開始日yyyymmdd] [終了日yyyymmdd]
+export [target start date(yyyymmdd)] [target end date(yyyymmdd)]
 ```
 
-### レスポンス
+#### `response`
 
-※CSVファイル出力
+※csv file
 ```
-ログID,タスクID,タスク名,ユーザー識別子,記録日,時間,作成日,更新日
+log id,task id,task name,username,target date,time,create at,update at
 ```
 
-### 備考
+#### `etc`
 
-## ヘルプ
+## help
 
-### 送信
+#### `command` 
 
 ```
 help
 ```
 
-### レスポンス
+#### `response`
 
 ※後日記載
 
-### 備考
+#### `etc`
 
