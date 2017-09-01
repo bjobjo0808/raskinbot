@@ -1,7 +1,11 @@
 # raskinbot    
 
-task - 案件毎に作成  
-log - 勤怠データ
+task - category  
+log - time recode  
+
+## Install
+
+// TODO
 
 ## Command
 
