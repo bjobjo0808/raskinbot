@@ -22,7 +22,7 @@ send [target date(yyyymmdd)] [category id] [time]
 ```
 勤怠を追加しました。  
 ログID:[log id]
-タスク名:[category name]
+カテゴリ名:[category name]
 対象日:[target date(yyyy-mm-dd)]
 時間:[time]h
 ```
@@ -40,7 +40,7 @@ edit [log id] [target date(yyyymmdd)] [category id] [time]
 ```
 勤怠を編集しました。
 ログID:[log id]
-タスク名:[category name]
+カテゴリ名:[category name]
 対象日:[target date(yyyy-mm-dd)]
 時間:[time]h
 ```
@@ -59,9 +59,9 @@ send-category [category name]
 #### `response`
 
 ```
-タスクを追加しました。
-タスクID:[category id]
-タスク名:[category name]
+カテゴリを追加しました。
+カテゴリID:[category id]
+カテゴリ名:[category name]
 時間:[time]
 ```
 
@@ -78,15 +78,15 @@ edit-category [category id] [category name]
 #### `response`
 
 ```
-タスクを編集しました。
-タスクID:[category id]
-タスク名:[category name]
+カテゴリを編集しました。
+カテゴリID:[category id]
+カテゴリ名:[category name]
 時間:[time]
 ```
 
 #### `etc`
 
-タスクは削除できない。
+カテゴリは削除できない。
 
 ## csv export
 
