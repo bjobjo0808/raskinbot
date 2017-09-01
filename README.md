@@ -1,6 +1,6 @@
 # raskinbot    
 
-task - category  
+category - category  
 log - time recode  
 
 ## Install
@@ -14,7 +14,7 @@ log - time recode
 #### `command` 
 
 ```
-send [target date(yyyymmdd)] [task id] [time]
+send [target date(yyyymmdd)] [category id] [time]
 ```
 
 #### `response` 
@@ -22,7 +22,7 @@ send [target date(yyyymmdd)] [task id] [time]
 ```
 勤怠を追加しました。  
 ログID:[log id]
-タスク名:[task name]
+タスク名:[category name]
 対象日:[target date(yyyy-mm-dd)]
 時間:[time]h
 ```
@@ -32,7 +32,7 @@ send [target date(yyyymmdd)] [task id] [time]
 #### `command` 
 
 ```
-edit [log id] [target date(yyyymmdd)] [task id] [time]
+edit [log id] [target date(yyyymmdd)] [category id] [time]
 ```
 
 #### `response`
@@ -40,7 +40,7 @@ edit [log id] [target date(yyyymmdd)] [task id] [time]
 ```
 勤怠を編集しました。
 ログID:[log id]
-タスク名:[task name]
+タスク名:[category name]
 対象日:[target date(yyyy-mm-dd)]
 時間:[time]h
 ```
@@ -48,39 +48,39 @@ edit [log id] [target date(yyyymmdd)] [task id] [time]
 #### `etc`
 time=0でデータ削除
 
-## add task
+## add category
 
 #### `command` 
 
 ```
-send-task [task name]
+send-category [category name]
 ```
 
 #### `response`
 
 ```
 タスクを追加しました。
-タスクID:[task id]
-タスク名:[task name]
+タスクID:[category id]
+タスク名:[category name]
 時間:[time]
 ```
 
 #### `etc`
 
-## edit task
+## edit category
 
 #### `command` 
 
 ```
-edit-task [task id] [task name]
+edit-category [category id] [category name]
 ```
 
 #### `response`
 
 ```
 タスクを編集しました。
-タスクID:[task id]
-タスク名:[task name]
+タスクID:[category id]
+タスク名:[category name]
 時間:[time]
 ```
 
@@ -100,7 +100,7 @@ export [target start date(yyyymmdd)] [target end date(yyyymmdd)]
 
 ※csv file
 ```
-log id,task id,task name,username,target date,time,create at,update at
+log id,category id,category name,username,target date,time,create at,update at
 ```
 
 #### `etc`
